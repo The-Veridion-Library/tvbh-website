@@ -28,6 +28,17 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[...existing code...]
+
+## Error Tracking
+
+This project uses [Sentry SDK for Next.js](https://docs.sentry.io/platforms/javascript/guides/nextjs/) with Better Stack for error tracking.
+
+DSN: https://A3WQBVR7HCvqY2kHMaUSQaGc@s1675418.eu-nbg-2.betterstackdata.com/1675418
+
+Configuration files:
+ - sentry.client.config.ts
+ - sentry.server.config.ts
 
 ## Deploy on Vercel
 

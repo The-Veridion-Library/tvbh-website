@@ -45,7 +45,7 @@ export default function HeroSection() {
                                 <MapTileLayer />
                                 <MapZoomControl />
                                 <MapMarker position={[43.6532, -79.3832]}>
-                                    <MapPopup>Example hidden book</MapPopup>
+                                    <MapPopup>Example hidden</MapPopup>
                                 </MapMarker>
                             </Map>
                         </div>
