@@ -228,16 +228,7 @@ function usePlaceSearch({
         fetchResults()
 
         return () => abortController.abort()
-    }, [
-        debouncedQuery,
-        props.lang,
-        props.limit,
-        props.bbox,
-        props.lat,
-        props.lon,
-        props.zoom,
-        props.locationBiasScale,
-    ])
+    }, [debouncedQuery, props.lang, props.limit, props.bbox, props.lat, props.lon, props.zoom, props.locationBiasScale, props])
 
     return { results, isLoading, error, hasSearched }
 }
@@ -293,7 +284,7 @@ function PlaceAutocomplete({
             <div className="relative">
                 <InputGroup
                     className={cn(
-                        "!border-input !bg-popover !ring-0",
+                        "border-input! bg-popover! ring-0!",
                         showCommandList && "rounded-b-none"
                     )}>
                     <InputGroupAddon>
@@ -333,7 +324,7 @@ function PlaceAutocomplete({
                         )}
                         {hasNoResults && (
                             <CommandEmpty>
-                                Can't find {displayValue}.
+                                Can&apos;t find {displayValue}.
                             </CommandEmpty>
                         )}
                         {results.length > 0 && (

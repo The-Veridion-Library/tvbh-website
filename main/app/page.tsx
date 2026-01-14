@@ -26,7 +26,7 @@ export default function HeroSection() {
                         </h1>
 
                         <p className="text-muted-foreground mb-8 text-balance lg:text-lg">
-                            Embark an a literary adventure! Decipher clues, find hidden books, and get rewards for your discoveries. Connect with fellow book lovers, and help out your local book stores and libraries.
+                            TVBH is a community-powered book scavenger hunt. We team up with local and national bookstores and libraries to create incredible hiding spots for real books. Crack clues, uncover hidden reads, and share your discoveries with fellow book lovers along the way. It’s part mystery, part adventure, and 100% about the joy of books. 📚✨
                         </p>
 
                         <div className="flex justify-center gap-2 lg:justify-start">
@@ -45,7 +45,7 @@ export default function HeroSection() {
                                 <MapTileLayer />
                                 <MapZoomControl />
                                 <MapMarker position={[43.6532, -79.3832]}>
-                                    <MapPopup>A map component for shadcn/ui.</MapPopup>
+                                    <MapPopup>Example hidden book</MapPopup>
                                 </MapMarker>
                             </Map>
                         </div>
