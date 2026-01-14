@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import "./globals.css";
+import "leaflet/dist/leaflet.css";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
