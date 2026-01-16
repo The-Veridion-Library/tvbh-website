@@ -9,28 +9,29 @@ import {
 
 const footerLinks = [
   {
-    title: "The Chronicle",
+    title: "The Hunt",
     links: [
-      { href: "/subscribe", label: "Subscribe" },
-      { href: "/archive", label: "Past Editions" },
-      { href: "/about", label: "About the Chronicle" },
-      { href: "/history", label: "This Edition in History" },
+      { href: "/about", label: "What Is TVBH?" },
+      { href: "/how-it-works", label: "How It Works" },
+      { href: "/catalog", label: "Browse the Book Catalog" },
+      { href: "/map", label: "Hunt Map" },
     ],
   },
   {
-    title: "Features",
+    title: "Players",
     links: [
-      { href: "/weekly-picks", label: "Weekly Picks" },
-      { href: "/games", label: "Crosswords & Games" },
-      { href: "/recipes", label: "Recipes" },
-      { href: "/riddles", label: "Riddles" },
+      { href: "/join", label: "Join the Hunt" },
+      { href: "/leaderboard", label: "Leaderboard" },
+      { href: "/xp", label: "XP & Ranks" },
+      { href: "/logbook", label: "Your Logbook" },
     ],
   },
   {
     title: "Community",
     links: [
-      { href: "/suggest", label: "Suggest a Pick" },
-      { href: "/newsletter", label: "Newsletter FAQ" },
+      { href: "/community", label: "Community Hub" },
+      { href: "/nominate-hunt-stop", label: "Nominate a Location" },
+      { href: "/partners", label: "Partner Locations" },
       { href: "/contact", label: "Contact" },
     ],
   },
@@ -73,7 +74,7 @@ export function Footer() {
 
         <div className="h-px bg-border" />
 
-        {/* Social + Newsletter Actions */}
+        {/* Social + Actions */}
         <div className="flex flex-wrap items-center justify-between gap-4 py-5">
           <div className="flex items-center gap-2">
             {socialLinks.map(({ icon: Icon, href }, index) => (
@@ -92,10 +93,10 @@ export function Footer() {
 
           <div className="flex gap-2">
             <Button asChild>
-              <a href="/subscribe">Subscribe Free</a>
+              <a href="/join">Join the Hunt</a>
             </Button>
             <Button asChild variant="outline">
-              <a href="/archive">Browse Archive</a>
+              <a href="/catalog">Browse Catalog</a>
             </Button>
           </div>
         </div>

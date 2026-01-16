@@ -41,11 +41,38 @@ export default function HeroSection() {
 
                     <div className="flex items-center justify-center">
                         <div style={{ height: 400, width: "100%" }}>
-                            <Map center={[43.6532, -79.3832]}>
+                            <Map center={[44.4759, -73.2121]} zoom={13}>
                                 <MapTileLayer />
                                 <MapZoomControl />
-                                <MapMarker position={[43.6532, -79.3832]}>
-                                    <MapPopup>Example hidden</MapPopup>
+
+                                {/* Downtown / Church Street */}
+                                <MapMarker position={[44.4765, -73.2127]}>
+                                    <MapPopup>Hidden near Church Street Marketplace</MapPopup>
+                                </MapMarker>
+
+                                {/* Waterfront / Bike Path */}
+                                <MapMarker position={[44.4809, -73.2216]}>
+                                    <MapPopup>Hidden along the Waterfront</MapPopup>
+                                </MapMarker>
+
+                                {/* University of Vermont */}
+                                <MapMarker position={[44.4689, -73.1967]}>
+                                    <MapPopup>Hidden near UVM Green</MapPopup>
+                                </MapMarker>
+
+                                {/* Old North End */}
+                                <MapMarker position={[44.4882, -73.2073]}>
+                                    <MapPopup>Hidden in the Old North End</MapPopup>
+                                </MapMarker>
+
+                                {/* South End / Arts District */}
+                                <MapMarker position={[44.4526, -73.2144]}>
+                                    <MapPopup>Hidden in the South End Arts District</MapPopup>
+                                </MapMarker>
+
+                                {/* Winooski (just outside Burlington) */}
+                                <MapMarker position={[44.4914, -73.1856]}>
+                                    <MapPopup>Hidden near Winooski Circle</MapPopup>
                                 </MapMarker>
                             </Map>
                         </div>

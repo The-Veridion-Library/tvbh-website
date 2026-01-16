@@ -3,81 +3,73 @@ import {
   FileText,
   GlobeIcon,
   HelpCircle,
-  History,
-  Leaf,
-  Mail,
-  Puzzle,
+  Map,
   ScrollText,
   Star,
+  Trophy,
   Users,
 } from "lucide-react";
 import type { LinkItemType } from "@/components/sheard";
 
 export const contentsLinks: LinkItemType[] = [
   {
-    label: "Latest Edition",
-    href: "/",
-    description: "Read the most recent issue of the Chronicle",
+    label: "Catalog",
+    href: "/catalog",
+    description: "Browse all available hunts and hidden books",
     icon: BookOpen,
   },
   {
-    label: "Archive",
-    href: "/archive",
-    description: "Browse past editions and features",
+    label: "Hunt Map",
+    href: "/map",
+    description: "Explore hunts by location",
+    icon: Map,
+  },
+  {
+    label: "Current Hunts",
+    href: "/hunts",
+    description: "See what adventures are live right now",
     icon: ScrollText,
   },
   {
-    label: "Weekly Picks",
-    href: "/weekly-picks",
-    description: "Word, animal, and location picks for the week",
+    label: "Leaderboard",
+    href: "/leaderboard",
+    description: "Top hunters and recent achievements",
+    icon: Trophy,
+  },
+  {
+    label: "XP & Ranks",
+    href: "/xp",
+    description: "Learn how leveling works",
     icon: Star,
-  },
-  {
-    label: "Games & Puzzles",
-    href: "/games",
-    description: "Crosswords, sudoku, and riddles",
-    icon: Puzzle,
-  },
-  {
-    label: "Recipes",
-    href: "/recipes",
-    description: "Curated recipes featured in the Chronicle",
-    icon: Leaf,
-  },
-  {
-    label: "This Edition in History",
-    href: "/history",
-    description: "A look back at notable moments in time",
-    icon: History,
   },
 ];
 
 export const aboutLinks: LinkItemType[] = [
   {
-    label: "About the Chronicle",
+    label: "What Is TVBH?",
     href: "/about",
-    description: "What The Veridion Chronicle is and why it exists",
+    description: "How The Veridion Book Hunt works",
     icon: Users,
   },
   {
-    label: "Our Editors’ Picks",
-    href: "/editors-picks",
-    description: "Highlighted features and favorites",
-    icon: Star,
+    label: "Community Hub",
+    href: "/community",
+    description: "Stories, photos, and updates from hunters",
+    icon: Users,
   },
   {
-    label: "Community Submissions",
-    href: "/submissions",
-    description: "Suggest a word, recipe, or riddle",
-    icon: Mail,
+    label: "Nominate a Location",
+    href: "/nominate-hunt-stop",
+    description: "Suggest a bookstore or library for a future hunt",
+    icon: Map,
   },
 ];
 
 export const aboutLinks2: LinkItemType[] = [
   {
-    label: "Subscribe",
-    href: "/subscribe",
-    icon: Mail,
+    label: "Join the Hunt",
+    href: "/join",
+    icon: BookOpen,
   },
   {
     label: "Terms",

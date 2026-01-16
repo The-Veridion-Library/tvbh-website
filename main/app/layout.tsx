@@ -4,6 +4,7 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import { Header } from "@/components/navigation/header";
 import { Footer } from "@/components/navigation/footer";
+import { VercelToolbar } from "@vercel/toolbar/next";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -27,6 +28,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Add a check for Vercel Toolbar injection
+  const shouldInjectToolbar = process.env.NODE_ENV === "development";
   return (
     <html lang="en" className={figtree.variable}>
       <body
@@ -34,6 +37,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        {shouldInjectToolbar && <VercelToolbar />}
         <Footer />
       </body>
     </html>
