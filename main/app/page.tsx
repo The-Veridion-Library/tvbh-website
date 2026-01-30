@@ -12,7 +12,7 @@ import {
 
 export default function HeroSection() {
     return (
-        <section className="flex min-h-screen items-center justify-center -mt-12 py-10 lg:py-16">
+        <section className="flex min-h-screen items-center justify-center -mt-12 py-10 lg:py-16 text-neutral-900 transition-colors duration-200 dark:text-neutral-100">
             <div className="mx-auto max-w-7xl px-4">
                 <div className="grid items-center gap-8 lg:grid-cols-2">
                     <header className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -21,11 +21,11 @@ export default function HeroSection() {
                             <ArrowUpRight />
                         </Badge>
 
-                        <h1 className="font-headingmy-4 text-4xl text-balance md:text-5xl lg:leading-14">
+                        <h1 className="font-headingmy-4 text-4xl text-balance md:text-5xl lg:leading-14 dark:text-neutral-100">
                             The Veridion Book Hunt
                         </h1>
 
-                        <p className="text-muted-foreground mb-8 text-balance lg:text-lg">
+                        <p className="text-muted-foreground mb-8 text-balance lg:text-lg dark:text-muted-foreground/80">
                             TVBH is a community-powered book scavenger hunt. We team up with local and national bookstores and libraries to create incredible hiding spots for real books. Crack clues, uncover hidden reads, and share your discoveries with fellow book lovers along the way. It’s part mystery, part adventure, and 100% about the joy of books. 📚✨
                         </p>
 
@@ -40,7 +40,7 @@ export default function HeroSection() {
                     </header>
 
                     <div className="flex items-center justify-center">
-                        <div style={{ height: 400, width: "100%" }}>
+                        <div className="w-full rounded-lg overflow-hidden border border-gray-200 dark:border-neutral-700 bg-white dark:bg-neutral-800" style={{ height: 400 }}>
                             <Map center={[44.4759, -73.2121]} zoom={13}>
                                 <MapTileLayer />
                                 <MapZoomControl />

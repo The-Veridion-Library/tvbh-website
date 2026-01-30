@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 import { Header } from "@/components/navigation/header";
 import { Footer } from "@/components/navigation/footer";
 import { VercelToolbar } from "@vercel/toolbar/next";
+import { ThemeProvider } from "@/components/theme-provider"
+import { Shader3 } from "@/components/shader";
 
 const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
@@ -31,14 +33,21 @@ export default function RootLayout({
   // Add a check for Vercel Toolbar injection
   const shouldInjectToolbar = process.env.NODE_ENV === "development";
   return (
-    <html lang="en" className={figtree.variable}>
+    <html lang="en" suppressHydrationWarning className={figtree.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <Header />
+          {children}
         {shouldInjectToolbar && <VercelToolbar />}
         <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
