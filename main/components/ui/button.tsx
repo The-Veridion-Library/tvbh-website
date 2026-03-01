@@ -46,12 +46,17 @@ function Button({
   }) {
   const Comp = asChild ? Slot.Root : "button"
 
+  // Ensure a sensible default for native button `type` so clicks trigger
+  // onClick handlers when used inside forms or other contexts.
+  const nativeType = (props as React.ComponentProps<typeof Comp>)?.type ?? "button"
+
   return (
     <Comp
       data-slot="button"
       data-variant={variant}
       data-size={size}
       className={cn(buttonVariants({ variant, size, className }))}
+      type={nativeType}
       {...props}
     />
   )
